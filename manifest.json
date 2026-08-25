@@ -8,14 +8,14 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "img/escudo_Rayo_Hortaleza.jpeg",
+      "src": "img/escudo.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png"
     },
     {
-      "src": "img/escudo_Rayo_Hortaleza.jpeg",
+      "src": "img/escudo.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ]
 }
