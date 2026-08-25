@@ -1,0 +1,21 @@
+{
+  "name": "Rayo de Hortaleza",
+  "short_name": "Rayo Hortaleza",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/escudo_Rayo_Hortaleza.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "img/escudo_Rayo_Hortaleza.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
