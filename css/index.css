@@ -14,6 +14,12 @@
     --sombra: rgba(0,0,0,0.15);
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -66,7 +72,7 @@ h1 {
 /* Caja principal */
 .popup-content { 
     background: var(--blanco);
-    padding: 35px 40px;
+    padding: 35px 25px;
     border-radius: 14px;
     width: 90%;
     max-width: 380px;
