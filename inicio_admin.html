@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web - Rayo de Hortaleza</title>
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+    <!-- CABECERA -->
+    <div id="contenedor-titulo">
+        <img id="escudo" src="img/escudo_Rayo_Hortaleza.jpeg" alt="escudo-rayo-hortaleza">
+        <h1>Rayo de Hortaleza</h1>
+    </div>
+
+    <!-- MENU -->
+    <div id="menu">
+        <table id="tabla-menu">
+            <tr>
+                <th id="botonMenuInicio">Inicio</th>
+                <th id="botonMenuPartidos">Partidos</th>
+                <th id="botonMenuEstadisticas">Estadisticas</th>
+            </tr>
+        </table>
+    </div>
+
+    <!-- CONTENEDOR SCROLL -->
+    <div id="scroll-screen">
+        <!-- CONTENEDOR JUGADORES -->
+        <div id="contenedor-tabla-jugadores">
+            <div id="botones-jugadores">
+                <input type="button" id="boton-añadir-jugador" value="Añadir jugador">
+                <input type="button" id="boton-modificar-jugador" value="Modificar jugador">
+                <input type="button" id="boton-eliminar-jugador" value="Eliminar jugador">
+            </div>
+            <div class="fila-superior-tabla">
+                <h3>JUGADORES</h3>
+            </div>
+            <table id="tabla-jugadores">
+                <tr>
+                    <th>Jugador</th>
+                    <th>PJ</th>
+                    <th>Goles</th>
+                    <th>Asistencias</th>
+                    <th>G+A</th>
+                </tr>
+            </table>
+            <div id="fila-inferior-jugadores">
+                <p>PJ = Partidos jugados</p>
+
+                <div id="botones-edicion">
+                    <input type="button" id="guardar-cambios" value="Guardar cambios" style="display:none;">
+                    <input type="button" id="cancelar-edicion" value="Cancelar edición" style="display:none;">
+                </div>
+            </div>
+        </div>
+
+        <!-- POP-UP AÑADIR -->
+        <div id="overlay-añadir-jugador" class="pop-up-overlay">
+            <div id="pop-up-añadir" class="pop-up">
+                <h3>Añadir jugador</h3>
+
+                <label for="nombre-añadir">Nombre:</label>
+                <input type="text" id="nombre-añadir">
+                <label for="numero-añadir">Dorsal:</label>
+                <input type="number" id="numero-añadir" min="1">
+
+                <input type="button" class="boton-accion" id="añadir-jugador" value="Añadir">
+                <input type="button" class="boton-cancelar" value="Cancelar">
+            </div>
+        </div>
+
+        <!-- POP-UP ELIMINAR -->
+        <div id="overlay-eliminar-jugador" class="pop-up-overlay">
+            <div id="pop-up-eliminar" class="pop-up">
+                <h3>Eliminar jugador</h3>
+
+                <label>Dorsal:</label>
+                <input type="number" id="numero-eliminar" min="1">
+
+                <input type="button" class="boton-accion" id="eliminar-jugador" value="Eliminar">
+                <input type="button" class="boton-cancelar" value="Cancelar">
+            </div>
+        </div>
+
+        <!-- CONTENEDOR PARTIDOS -->
+        <div id="contenedor-partidos">
+            <div id="botones-partidos">
+                <input type="button" id="boton-añadir-partido" value="Añadir partido">
+                <input type="button" id="boton-modificar-partido" value="Modificar partido">
+                <input type="button" id="boton-eliminar-partido" value="Eliminar partido">
+            </div>
+            <div class="fila-superior-tabla">
+                <h3>PARTIDOS</h3>
+            </div>
+            <table id="tabla-partidos">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Horario</th>
+                    <th>Partido</th>
+                    <th>Color</th>
+                    <th>Estado</th>
+                </tr>
+            </table>
+            <div id="botones-edicion-partidos">
+                <input type="button" id="guardar-cambios-partidos" value="Guardar cambios" style="display:none;">
+                <input type="button" id="cancelar-edicion-partidos" value="Cancelar edición" style="display:none;">
+            </div>
+            <button id="boton-descargar-pdf" class="boton-descargar">Descargar PDF</button>
+        </div>
+
+        <!-- POP-UP AÑADIR -->
+        <div id="overlay-añadir-partido" class="pop-up-overlay">
+            <div id="pop-up-añadir" class="pop-up">
+                <h3>Añadir partido</h3>
+
+                <label for="fecha-añadir">Fecha:</label>
+                <input type="date" id="fecha-añadir">
+
+                <label for="hora-añadir">Hora:</label>
+                <select id="hora-añadir"></select>
+
+                <label for="eq-lo-añadir">Equipo local:</label>
+                <input type="text" id="eq-lo-añadir">
+
+                <label for="eq-vi-añadir">Equipo visitante:</label>
+                <input type="text" id="eq-vi-añadir">
+
+                <label for="color-añadir">Color:</label>
+                <select name="color-añadir" id="color-añadir">
+                    <option value="azul">Azul</option>
+                    <option value="negro">Negro</option>
+                </select>
+
+                <label for="estado-añadir">Estado:</label>
+                <select name="estado-añadir" id="estado-añadir">
+                    <option value="no jugado">No jugado</option>
+                    <option value="ganado">Ganado</option>
+                    <option value="empatado">Empatado</option>
+                    <option value="perdido">Perdido</option>
+                </select>
+
+                <input type="button" class="boton-accion" id="añadir-partido" value="Añadir">
+                <input type="button" class="boton-cancelar" value="Cancelar">
+            </div>
+        </div>
+
+        <!-- POP-UP ELIMINAR -->
+        <div id="overlay-eliminar-partido" class="pop-up-overlay">
+            <div id="pop-up-eliminar" class="pop-up">
+                <h3>Eliminar partido</h3>
+
+                <label>Fecha del partido:</label>
+                <input type="date" id="fecha-eliminar">
+
+                <input type="button" class="boton-accion" id="eliminar-partido" value="Eliminar">
+                <input type="button" class="boton-cancelar" value="Cancelar">
+            </div>
+        </div>
+
+        <!-- CONTENEDOR GRAFICAS -->
+        <div id="contenedor-graficas">
+            <div class="fila-superior-tabla">
+                <h3>ESTADÍSTICAS</h3>
+            </div>
+            <div id="botones-partidos">
+                <input type="button" id="boton-est-jugadores" value="Jugadores">
+                <input type="button" id="boton-est-partidos" value="Partidos">
+            </div>
+            <div id="estadisticas-jugadores">
+                <h4>Partidos jugados</h4>
+                <div id="grafico-partidos-jugados"></div>
+                <h4>Goles</h4>
+                <div id="grafico-goles"></div>
+                <h4>Asistencias</h4>
+                <div id="grafico-asistencias"></div>
+                <h4>Goles + Asistencias</h4>
+                <div id="grafico-goles-asistencias"></div>
+            </div>
+            <div id="estadisticas-partidos">
+                <h4>Partidos</h4>
+                <div id="grafico-partidos"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>Futbol 7 - Liga del Luis Aragones</p>
+        <p id="ig">
+            <img id="logo-ig" src="img/logo-ig.png" alt="logo-ig">
+            <a href="https://www.instagram.com/rayohortaleza/">
+                @rayohortaleza
+            </a>
+        </p>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/admin/api_jugadores.js" defer></script>
+    <script src="js/admin/api_partidos.js" defer></script>
+    <script src="js/estadisticas.js" defer></script>
+    <script src="js/admin/inicio.js" defer></script>
+</body>
+</html>
