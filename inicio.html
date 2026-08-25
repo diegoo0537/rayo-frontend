@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,4 +108,115 @@
     <script src="js/estadisticas.js" defer></script>
     <script src="js/user/inicio.js" defer></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web - Rayo de Hortaleza</title>
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+    <!-- CABECERA -->
+    <div id="contenedor-titulo">
+        <img id="escudo" src="img/escudo_Rayo_Hortaleza.jpeg" alt="escudo-rayo-hortaleza">
+        <h1>Rayo de Hortaleza</h1>
+    </div>
+
+    <!-- MENU -->
+    <div id="menu">
+        <table id="tabla-menu">
+            <tr>
+                <th id="botonMenuInicio">Inicio</th>
+                <th id="botonMenuPartidos">Partidos</th>
+                <th id="botonMenuEstadisticas">Estadisticas</th>
+            </tr>
+        </table>
+    </div>
+
+    <!-- CONTENEDOR SCROLL -->
+    <div id="scroll-screen">
+        <!-- CONTENEDOR JUGADORES -->
+        <div id="contenedor-tabla-jugadores">
+            <div class="fila-superior-tabla">
+                <h3>JUGADORES</h3>
+            </div>
+            <table id="tabla-jugadores">
+                <tr>
+                    <th>Jugador</th>
+                    <th>PJ</th>
+                    <th>Goles</th>
+                    <th>Asistencias</th>
+                    <th>G+A</th>
+                </tr>
+            </table>
+            <div id="fila-inferior-jugadores">
+                <p>PJ = Partidos jugados</p>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR PARTIDOS -->
+        <div id="contenedor-partidos">
+            <div class="fila-superior-tabla">
+                <h3>PARTIDOS</h3>
+            </div>
+            <table id="tabla-partidos">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Horario</th>
+                    <th>Partido</th>
+                    <th>Color</th>
+                    <th>Estado</th>
+                </tr>
+            </table>
+            <button id="boton-descargar-pdf" class="boton-descargar">Descargar PDF</button>
+        </div>
+
+        <!-- CONTENEDOR GRAFICAS -->
+        <div id="contenedor-graficas">
+            <div class="fila-superior-tabla">
+                <h3>ESTADÍSTICAS</h3>
+            </div>
+            <div id="botones-partidos">
+                <input type="button" id="boton-est-jugadores" value="Jugadores">
+                <input type="button" id="boton-est-partidos" value="Partidos">
+            </div>
+            <div id="estadisticas-jugadores">
+                <h4>Partidos jugados</h4>
+                <div id="grafico-partidos-jugados"></div>
+                <h4>Goles</h4>
+                <div id="grafico-goles"></div>
+                <h4>Asistencias</h4>
+                <div id="grafico-asistencias"></div>
+                <h4>Goles + Asistencias</h4>
+                <div id="grafico-goles-asistencias"></div>
+            </div>
+            <div id="estadisticas-partidos">
+                <h4>Partidos</h4>
+                <div id="grafico-partidos"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>Futbol 7 - Liga del Luis Aragones</p>
+        <p id="ig">
+            <img id="logo-ig" src="img/logo-ig.png" alt="logo-ig">
+            <a href="https://www.instagram.com/rayohortaleza/">
+                @rayohortaleza
+            </a>
+        </p>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/user/api_jugadores.js" defer></script>
+    <script src="js/user/api_partidos.js" defer></script>
+    <script src="js/estadisticas.js" defer></script>
+    <script src="js/user/inicio.js" defer></script>
+</body>
+>>>>>>> 9989992ca0eb607f8d858f57431169d8d0bba6ad
 </html>
