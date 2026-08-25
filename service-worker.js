@@ -28,7 +28,8 @@ const urlsToCache = [
 
   // Imágenes
   "/img/logo-ig.png",
-  "/img/escudo_Rayo_Hortaleza.jpeg"
+  "/img/escudo_Rayo_Hortaleza.jpeg",
+  "/img/escudo.png",
 ];
 
 // Instalar SW y cachear archivos
